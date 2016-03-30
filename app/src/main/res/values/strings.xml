@@ -7,5 +7,6 @@
 
     <string name="txtLabel1">Livello</string>
     <string name="txtLabel2">Regexp lung.\nparole (es. 457)</string>
+    <string name="txtLabel5">Lettere rompicapo</string>
     <string name="txtParole">Possibili soluzioni: </string>
 </resources>

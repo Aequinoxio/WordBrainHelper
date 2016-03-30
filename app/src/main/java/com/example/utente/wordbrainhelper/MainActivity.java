@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements
@@ -119,7 +120,18 @@ public class MainActivity extends AppCompatActivity implements
             for (int i=0;i<lungParole.length()-1;i++){
                 RegExp = RegExp + "," + RegExpAtom;
             }
-            sqlQuery += " AND lung_parole REGEXP '"+ RegExp+"'";
+            sqlQuery += " AND lung_parole REGEXP '"+ RegExp+"' ";
+        }
+
+        String lettereRompicapo= ((EditText) findViewById(R.id.txtLettereRompicapo)).getText().toString().trim();
+
+        // Ordino le lettere del rompicapo e le aggiungo alla query
+        if (lettereRompicapo.length()!=0){
+            lettereRompicapo = lettereRompicapo.toUpperCase();
+            char[] dummy=lettereRompicapo.toCharArray();
+            Arrays.sort(dummy);
+            lettereRompicapo=String.valueOf(dummy);
+            sqlQuery += " AND firma_ordinata='"+lettereRompicapo+"'";
         }
 
         DataAdapter mDbHelper = new DataAdapter(this);
