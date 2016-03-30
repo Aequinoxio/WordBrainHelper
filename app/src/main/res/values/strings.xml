@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WordBrainHelper</string>
+    <string name="app_name">WordBrain Helper</string>
     <string name="app_desc">Un aiutino veloce per risolvere i livelli di WordBrain in cui ti sei bloccato</string>
     <string name="titolo_app">Cerca soluzioni WordBrain</string>
     <string name="Autore">Gabriele Galluzzo</string>

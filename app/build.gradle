@@ -1,19 +1,21 @@
 apply plugin: 'com.android.application'
+apply from: "../artifacts.gradle"
 
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "com.example.utente.wordbrainhelper"
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
-        versionName '1.1'
+        versionName '1.2'
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFile 'C:/Users/utente/AppData/Local/Android/sdk/tools/proguard/proguard-android.txt'
         }
     }
     productFlavors {

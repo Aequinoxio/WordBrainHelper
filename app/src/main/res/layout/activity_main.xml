@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.utente.wordbrainhelper.MainActivity">
+    tools:context="com.example.utente.wordbrainhelper.MainActivity"
+    android:focusableInTouchMode="true">
 
     <View
         android:layout_width="fill_parent"
@@ -130,6 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtLettereRompicapo"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:inputType="textCapCharacters"
         android:layout_alignTop="@+id/textView5"
         android:layout_alignEnd="@+id/hLine"
