@@ -23,13 +23,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Database Version
     private static final int DATABASE_VERSION = 1;
 
-//    // Database Name
-//    private static final String DATABASE_NAME = "wordbrain_soluzioni";
-
     // Labels table name
     private static final String TABLE_LIVELLI = "livelli";
 
     private static String TAG = "DataBaseHandler"; // Tag just for the LogCat window
+
     //destination path (location) of our database on device
     private static String DB_PATH = "";
     private static String DB_NAME ="wordbrain_soluzioni.db";// Database name

@@ -69,7 +69,8 @@ public class DataAdapter
             Cursor mCur = mDb.rawQuery(sql, null);
             if (mCur!=null)
             {
-                mCur.moveToNext();
+                //mCur.moveToNext();
+                mCur.moveToFirst();
             }
             return mCur;
         }
@@ -84,7 +85,7 @@ public class DataAdapter
      * Getting all labels
      * returns list of labels
      * */
-    public List<String> getValues(String selectQuery){
+    public List<String> getValues(String selectQuery, int index){
         List<String> labels = new ArrayList<String>();
 
         //SQLiteDatabase db = this.getReadableDatabase();
@@ -93,12 +94,20 @@ public class DataAdapter
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                labels.add(cursor.getString(0));
+                labels.add(cursor.getString(index));
             } while (cursor.moveToNext());
         }
 
         // returning lables
         return labels;
+    }
+
+    /**
+     *
+     */
+    public void setValues(String updateQuery){
+        //Cursor cursor = mDb.rawQuery(updateQuery, null);
+        mDb.execSQL(updateQuery);
     }
 
 }

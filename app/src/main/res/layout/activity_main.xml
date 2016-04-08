@@ -8,8 +8,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.utente.wordbrainhelper.MainActivity"
+    android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true">
-
+    <requestFocus />
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
@@ -34,7 +35,7 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="@android:color/black"
+        android:background="@android:color/transparent"
         android:layout_below="@+id/txtLettereRompicapo"
         android:layout_alignParentStart="true"
         android:id="@+id/hLine" />
@@ -46,7 +47,8 @@
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="searchClick" />
+        android:onClick="searchClick"
+        />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -106,8 +108,7 @@
         android:id="@+id/lstParole"
         android:layout_below="@+id/textView4"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/button"
-        android:background="#00f7ff" />
+        android:layout_above="@+id/button" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -118,7 +119,8 @@
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:layout_alignTop="@+id/hLine"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Space
         android:layout_width="20px"
@@ -157,5 +159,22 @@
         android:id="@+id/space3"
         android:layout_below="@+id/txtLunghezzaParole"
         android:layout_centerHorizontal="true" />
+
+    <CheckedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostra solo\nnon risolti"
+        android:id="@+id/checkedTextView"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:checked="false"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+
+        android:textStyle="bold"
+        android:layout_below="@+id/txtLunghezzaParole"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

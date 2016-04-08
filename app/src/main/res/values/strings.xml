@@ -5,6 +5,9 @@
     <string name="Autore">Gabriele Galluzzo</string>
     <string name="action_about">Informazioni</string>
 
+    <string name="giaRisoltoRegexp"> \\(Già risolto\\)</string>
+    <string name="giaRisolto"> (Già risolto)</string>
+
     <string name="txtLabel1">Livello</string>
     <string name="txtLabel2">Regexp lung.\nparole (es. 457)</string>
     <string name="txtLabel5">Lettere rompicapo</string>
